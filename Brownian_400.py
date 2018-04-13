@@ -23,7 +23,7 @@ def run_experiment():
 			# print(i,sum_Xi)
 		Yi = sum_Xi/math.sqrt(n)
 		Yn.append(Yi)
-	return Yn[-1]
+	return Yn
 
 
 
@@ -45,12 +45,12 @@ rep_list=[]
 # print(a1)
 for rep in range(400):
 	a2 = run_experiment()
-	rep_list.append(a2)
-print(sum(rep_list)/len(rep_list))
-print(np.var(rep_list))
+	plt.plot(a2)
+# print(sum(rep_list)/len(rep_list))
+# print(np.var(rep_list))
 # print(rep_list)
-# plt.plot(rep_list)
-plt.figure()
+
+# plt.figure()
 # plt.hist(rep_list, bins=10)
 plt.show()
 
